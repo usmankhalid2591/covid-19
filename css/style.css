@@ -1,3 +1,82 @@
+/*********************************************************************
+// Generic CSS
+*********************************************************************/
+.--covid-blue {
+  color: #4d5cf0 !important;
+}
+
+.--covid-bg-blue {
+  background-color: #4d5cf0 !important;
+}
+
+.--covid-border-blue {
+  border-color: #4d5cf0 !important;
+}
+
+.--covid-orange {
+  color: #ff7442 !important;
+}
+
+.--covid-bg-orange {
+  background-color: #ff7442 !important;
+}
+
+.--covid-border-orange {
+  border-color: #ff7442 !important;
+}
+
+.--covid-dark {
+  color: #47495d !important;
+}
+
+.--covid-bg-dark {
+  background-color: #47495d !important;
+}
+
+.--covid-border-dark {
+  border-color: #47495d !important;
+}
+
+.--covid-light {
+  color: #FAFAFE !important;
+}
+
+.--covid-bg-light {
+  background-color: #FAFAFE !important;
+}
+
+.--covid-border-light {
+  border-color: #FAFAFE !important;
+}
+
+.--covid-bg-white {
+  background-color: #ffffff !important;
+}
+
+.--covid-text {
+  color: #47495d !important;
+}
+
+.--covid-dark-shadow {
+  -webkit-box-shadow: 0px 0px 7px -1px #47495d;
+          box-shadow: 0px 0px 7px -1px #47495d;
+}
+
+.--border-radius-10 {
+  border-radius: 10px;
+}
+
+.--border {
+  border: 2px solid transparent;
+}
+
+.--border-1 {
+  border: 1px solid !important;
+}
+
+/*********************************************************************
+// Main CSS
+*********************************************************************/
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -18,14 +97,6 @@ body img {
   width: 100%;
 }
 
-.--border-radius-10 {
-  border-radius: 10px;
-}
-
-.--border {
-  border: 2px solid transparent;
-}
-
 header #nav {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
@@ -37,12 +108,32 @@ header .navbar {
   width: 100%;
 }
 
+header .navbar li .nav-link {
+  color: #ffffff !important;
+}
+
 header .navbar li.active {
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid #FAFAFE;
 }
 
 header .navbar li:nth-last-of-type(1) {
   margin-left: 10px;
+}
+
+header .navbar-light li .nav-link {
+  color: #47495d !important;
+}
+
+header .navbar-light li.active {
+  border-bottom: 2px solid #47495d;
+}
+
+header .navbar-light li:nth-last-of-type(1) {
+  margin-left: 10px;
+}
+
+header .navbar-light li #contactButton {
+  color: #FAFAFE !important;
 }
 
 .hero {
@@ -66,6 +157,7 @@ header .navbar li:nth-last-of-type(1) {
   height: 12px;
   border-radius: 50%;
   margin-left: 5px;
+  outline: none;
 }
 
 .hero .owl-dots .owl-dot.active {
@@ -80,9 +172,8 @@ header .navbar li:nth-last-of-type(1) {
 }
 
 .about .about__download__apk {
-  width: 250px;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 .about .about__download__apk:hover {
@@ -90,7 +181,7 @@ header .navbar li:nth-last-of-type(1) {
 }
 
 .about .about__download__apk:hover p {
-  color: white;
+  color: #ffffff !important;
 }
 
 .symptoms {
@@ -112,6 +203,11 @@ header .navbar li:nth-last-of-type(1) {
   margin: 3px 0;
 }
 
+.disclaimer__inner {
+  background-color: #FAFAFE;
+  border-color: #D6D8E2 !important;
+}
+
 footer {
   height: 250px;
 }
@@ -121,7 +217,7 @@ footer .footer__links li {
 }
 
 footer .footer__links li a {
-  color: white;
+  color: #ffffff;
 }
 
 @media only screen and (min-width: 1920px) {

@@ -1,3 +1,95 @@
+/*********************************************************************
+// Generic CSS
+*********************************************************************/
+
+$covid-blue: #4d5cf0;
+$covid-orange: #ff7442;
+$covid-yellow: #ffac00;
+$covid-dark: #47495d;
+$covid-light: #FAFAFE;
+$covid-text: #47495d;
+$covid-white: #ffffff;
+
+.--covid-blue {
+  color: $covid-blue !important;
+}
+
+.--covid-bg-blue {
+  background-color: $covid-blue !important;
+}
+
+.--covid-border-blue {
+  border-color: $covid-blue !important;
+}
+
+.--covid-orange {
+  color: $covid-orange !important;
+}
+
+.--covid-bg-orange {
+  background-color: $covid-orange !important;
+}
+
+.--covid-border-orange {
+  border-color: $covid-orange !important;
+}
+
+.--covid-dark {
+  color: $covid-dark !important;
+}
+
+.--covid-bg-dark {
+  background-color: $covid-dark !important;
+}
+
+.--covid-border-dark{
+  border-color: $covid-dark !important;
+}
+
+.--covid-light {
+  color: $covid-light !important;
+}
+
+.--covid-bg-light{
+  background-color: $covid-light !important;
+}
+
+.--covid-border-light{
+  border-color: $covid-light !important;
+}
+
+.--covid-bg-white{
+    background-color: $covid-white !important;
+}
+
+.--covid-text {
+  color: $covid-text !important;
+}
+
+.--covid-dark-shadow{
+    box-shadow: 0px 0px 7px -1px $covid-dark;
+}
+
+
+// Border-radiuses
+.--border-radius-10 {
+  border-radius: 10px;
+}
+
+//Borders
+.--border {
+  border: 2px solid transparent;
+}
+
+.--border-1{
+  border: 1px solid !important;
+}
+
+
+/*********************************************************************
+// Main CSS
+*********************************************************************/
+
 * {
   box-sizing: border-box;
   outline: none;
@@ -17,17 +109,6 @@ body {
   }
 }
 
-// Border-radiuses
-
-.--border-radius-10 {
-  border-radius: 10px;
-}
-
-//Borders
-
-.--border {
-  border: 2px solid transparent;
-}
 
 header {
   #nav {
@@ -37,13 +118,43 @@ header {
     position: fixed;
     z-index: 2;
     width: 100%;
+
+    li{
+      .nav-link{
+        color: $covid-white !important;
+      }
+    }
     li.active {
-      border-bottom: 2px solid white;
+      border-bottom: 2px solid $covid-light;
     }
     li:nth-last-of-type(1) {
       margin-left: 10px;
     }
   }
+
+  .navbar-light{
+
+    li{
+      .nav-link{
+        color: $covid-dark !important;
+      }
+    }
+
+    li.active {
+      border-bottom: 2px solid $covid-dark;
+    }
+    li:nth-last-of-type(1) {
+      margin-left: 10px;
+    }
+
+    li{
+      #contactButton{
+        color: $covid-light !important;
+      }
+    }
+
+  }
+
 }
 
 .hero {
@@ -51,49 +162,48 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
   .owl-nav{
       display: none;
   }
-
   .owl-dots{
-
     margin-top: 20px;
-
     .owl-dot{
         background-color: #D3D3E1 !important;
         width: 12px;
         height: 12px;
         border-radius: 50%;
         margin-left: 5px;
+        outline: none;
     }
-  
     .owl-dot.active{
         background-color: #FACB39 !important;
     }
-
   }
-
 }
 
 .about {
+
   background: url(../img/about-section-bg.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
   .about__download__apk{
-    width: 250px;
-    transition: all 0.2s;
+
+    transition: all 0.4s ;
+
   }
 
   .about__download__apk:hover{
-      background-color: #ff7442;
+
+      background-color: $covid-orange;
+
       p{
-        color: white;
+
+        color: $covid-white !important;
+
       }
   }
-
 }
 
 .symptoms {
@@ -101,28 +211,50 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
   .symptoms__list {
+
     list-style: none;
     padding: 0;
+
     li {
+
       background: url(../img/tick.png) no-repeat left center;
       padding-left: 50px; /* the width of your image + some space */
       margin: 3px 0;
+
     }
   }
 }
 
+.disclaimer{
+  &__inner{
+    background-color: $covid-light;
+    border-color: #D6D8E2 !important;
+  }
+}
+
 footer{
+
     height: 250px;
+
     .footer__links{
+
         li{
+
             margin: 0px 10px;
+
             a{
-                color: white;
+
+                color: $covid-white;
+
             }
         }
     }
 }
+
+
+
 
 
 @media only screen and (min-width: 1920px) {
@@ -136,11 +268,9 @@ footer{
     .hero{
         height: 700px;
     }
-
     .about{
         height: 700px;
     }
-
     .symptoms{
         height: 700px;
     }

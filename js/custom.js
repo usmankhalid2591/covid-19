@@ -22,15 +22,30 @@ window.onscroll = function () {
     }
 };
 
+document.getElementById('navbarToggler').onclick = function (){
+    if (screen.width < 991) {
+        myNav.classList.toggle("bg-white");
+        myNav.classList.toggle("navbar-light");
+        myNav.classList.toggle("--covid-dark-shadow");
+        myNav.classList.toggle("navbar-dark");
+        myNav.classList.toggle("bg-transparent");
+    }
+}
+
+
+
 $('.owl-carousel').owlCarousel({
-    loop:true,
-    autoplay:true,
-    margin:10,
-    nav:true,
-    dots:true,
-    responsive:{
-        300:{
-            items:1
+    loop: true,
+    autoplay: true,
+    margin: 10,
+    nav: true,
+    dots: true,
+    responsive: {
+        300: {
+            items: 1
         }
     }
 })
+
+
+// Functions
