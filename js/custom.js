@@ -22,14 +22,28 @@ window.onscroll = function () {
     }
 };
 
-document.getElementById('navbarToggler').onclick = function (){
-    if (screen.width < 991) {
-        myNav.classList.toggle("bg-white");
-        myNav.classList.toggle("navbar-light");
-        myNav.classList.toggle("--covid-dark-shadow");
-        myNav.classList.toggle("navbar-dark");
-        myNav.classList.toggle("bg-transparent");
+document.getElementById('navbarToggler').onclick = function () {
+
+    if (document.body.scrollTop === 0 || document.documentElement.scrollTop === 0) {
+
+        if (screen.width <= 991) {
+
+            myNav.classList.add("bg-white");
+            myNav.classList.add("navbar-light");
+            myNav.classList.add("--covid-dark-shadow");
+            myNav.classList.remove("navbar-dark");
+            myNav.classList.remove("bg-transparent");
+
+        } else {
+            myNav.classList.add("bg-transparent");
+            myNav.classList.add("navbar-dark");
+            myNav.classList.remove("bg-white");
+            myNav.classList.remove("navbar-light");
+            myNav.classList.remove("--covid-dark-shadow");
+        }
+
     }
+
 }
 
 
