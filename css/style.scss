@@ -1,0 +1,211 @@
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+html,
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  font-family: roboto-regular;
+
+  img {
+    width: 100%;
+  }
+}
+
+// Border-radiuses
+
+.--border-radius-10 {
+  border-radius: 10px;
+}
+
+//Borders
+
+.--border {
+  border: 2px solid transparent;
+}
+
+header {
+  #nav {
+    transition: all 0.2s;
+  }
+  .navbar {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    li.active {
+      border-bottom: 2px solid white;
+    }
+    li:nth-last-of-type(1) {
+      margin-left: 10px;
+    }
+  }
+}
+
+.hero {
+  background: url(../img/hero.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .owl-nav{
+      display: none;
+  }
+
+  .owl-dots{
+
+    margin-top: 20px;
+
+    .owl-dot{
+        background-color: #D3D3E1 !important;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        margin-left: 5px;
+    }
+  
+    .owl-dot.active{
+        background-color: #FACB39 !important;
+    }
+
+  }
+
+}
+
+.about {
+  background: url(../img/about-section-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .about__download__apk{
+    width: 250px;
+    transition: all 0.2s;
+  }
+
+  .about__download__apk:hover{
+      background-color: #ff7442;
+      p{
+        color: white;
+      }
+  }
+
+}
+
+.symptoms {
+  background: url(../img/symptoms-section-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .symptoms__list {
+    list-style: none;
+    padding: 0;
+    li {
+      background: url(../img/tick.png) no-repeat left center;
+      padding-left: 50px; /* the width of your image + some space */
+      margin: 3px 0;
+    }
+  }
+}
+
+footer{
+    height: 250px;
+    .footer__links{
+        li{
+            margin: 0px 10px;
+            a{
+                color: white;
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width: 1920px) {
+    .hero{
+        height: 1000px;
+    }
+}
+
+@media only screen and (max-width: 1920px) {
+
+    .hero{
+        height: 700px;
+    }
+
+    .about{
+        height: 700px;
+    }
+
+    .symptoms{
+        height: 700px;
+    }
+
+}
+
+@media only screen and (max-width: 1440px) {
+    
+}
+
+@media only screen and (max-width: 1366px) {
+}
+
+@media only screen and (max-width: 1024px) {
+}
+
+@media only screen and (max-width: 991px){
+    .navbar{
+        .nav-link{
+            text-align: center;
+        }
+        .bar{
+            display: none;
+        }
+    }
+
+    .hero{
+        .row{
+            h2{
+                margin: 0px !important;
+            }
+        }
+    }
+
+    .about{
+        height: 100vh;
+    }
+
+    .symptoms{
+        height: 100vh;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+
+    footer{
+        height: auto !important;
+        padding: 1rem;
+        ul{
+            flex-direction: column;
+            text-align: center;
+            .footer__bar{
+                display: none;
+            }
+        }
+    }
+
+
+}
+
+@media only screen and (max-width: 480px){
+    .hero{
+        height: 1000px;
+        background-position: center;
+    }
+}
