@@ -367,6 +367,17 @@ footer .footer__links li a {
           box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.3);
 }
 
+.privacy__navs .nav {
+  border-bottom: 1px solid #47495d !important;
+}
+
+.privacy__navs .nav-link.active {
+  color: #ff7442 !important;
+  border-bottom: 2px solid #ff7442;
+  border-radius: 0px;
+  margin-bottom: -1px;
+}
+
 /*********************************************************************
 // Main Quries
 *********************************************************************/

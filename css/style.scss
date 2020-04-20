@@ -405,8 +405,15 @@ footer {
 
 .privacy__navs{
 
+  .nav{
+    border-bottom: 1px solid $covid-dark !important;
+  }
+
   .nav-link.active{
-    color: $covid-orange;
+    color: $covid-orange !important;
+    border-bottom: 2px solid $covid-orange;
+    border-radius: 0px;
+    margin-bottom: -1px;
   }
 
 }
