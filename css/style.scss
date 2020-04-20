@@ -2,11 +2,28 @@
 // Generic CSS
 *********************************************************************/
 
+// Border-radiuses
+.--border-radius-10 {
+  border-radius: 10px;
+}
+
+//Borders
+.--border {
+  border: 2px solid transparent;
+}
+
+.--border-1 {
+  border: 1px solid !important;
+}
+
+// Colors
+
 $covid-blue: #4d5cf0;
 $covid-orange: #ff7442;
 $covid-yellow: #ffac00;
+$covid-yellow-light: #fff8e6;
 $covid-dark: #47495d;
-$covid-light: #FAFAFE;
+$covid-light: #fafafe;
 $covid-text: #47495d;
 $covid-white: #ffffff;
 
@@ -42,7 +59,7 @@ $covid-white: #ffffff;
   background-color: $covid-dark !important;
 }
 
-.--covid-border-dark{
+.--covid-border-dark {
   border-color: $covid-dark !important;
 }
 
@@ -50,45 +67,48 @@ $covid-white: #ffffff;
   color: $covid-light !important;
 }
 
-.--covid-bg-light{
+.--covid-bg-light {
   background-color: $covid-light !important;
 }
 
-.--covid-border-light{
+.--covid-border-light {
   border-color: $covid-light !important;
 }
 
-.--covid-bg-white{
-    background-color: $covid-white !important;
+.--covid-yellow {
+  color: $covid-yellow !important;
+}
+
+.--covid-bg-yellow {
+  background-color: $covid-yellow !important;
+}
+
+.--covid-border-yellow {
+  border-color: $covid-yellow !important;
+}
+
+.--covid-bg-yellow-light {
+  background-color: $covid-yellow-light !important;
+}
+
+.--covid-bg-white {
+  background-color: $covid-white !important;
 }
 
 .--covid-text {
   color: $covid-text !important;
 }
 
-.--covid-dark-shadow{
-    box-shadow: 0px 0px 7px -1px $covid-dark;
+.--covid-dark-shadow {
+  box-shadow: 0px 0px 7px -1px $covid-dark;
 }
-
-
-// Border-radiuses
-.--border-radius-10 {
-  border-radius: 10px;
-}
-
-//Borders
-.--border {
-  border: 2px solid transparent;
-}
-
-.--border-1{
-  border: 1px solid !important;
-}
-
 
 /*********************************************************************
 // Main CSS
 *********************************************************************/
+
+
+
 
 * {
   box-sizing: border-box;
@@ -102,12 +122,20 @@ body {
 }
 
 body {
-  font-family: roboto-regular;
+  font-family: roboto-light;
 
   img {
     width: 100%;
   }
 }
+
+
+.btn, input, textarea:focus, .btn, input:active {
+  border: none !important;
+  box-shadow: 0px 0px 0.2rem 0px !important;
+}
+
+
 
 
 header {
@@ -119,8 +147,8 @@ header {
     z-index: 2;
     width: 100%;
 
-    li{
-      .nav-link{
+    li {
+      .nav-link {
         color: $covid-white !important;
       }
     }
@@ -132,10 +160,9 @@ header {
     }
   }
 
-  .navbar-light{
-
-    li{
-      .nav-link{
+  .navbar-light {
+    li {
+      .nav-link {
         color: $covid-dark !important;
       }
     }
@@ -147,14 +174,12 @@ header {
       margin-left: 10px;
     }
 
-    li{
-      #contactButton{
+    li {
+      #contactButton {
         color: $covid-light !important;
       }
     }
-
   }
-
 }
 
 .hero {
@@ -162,47 +187,41 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  .owl-nav{
-      display: none;
+  .owl-nav {
+    display: none;
   }
-  .owl-dots{
+  .owl-dots {
     margin-top: 20px;
-    .owl-dot{
-        background-color: #D3D3E1 !important;
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        margin-left: 5px;
-        outline: none;
+    .owl-dot {
+      background-color: #d3d3e1 !important;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      margin-left: 5px;
+      outline: none;
     }
-    .owl-dot.active{
-        background-color: #FACB39 !important;
+    .owl-dot.active {
+      background-color: #facb39 !important;
     }
   }
 }
 
 .about {
-
   background: url(../img/about-section-bg.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
 
-  .about__download__apk{
+.about__download__apk {
+  transition: all 0.4s;
+}
 
-    transition: all 0.4s ;
+.about__download__apk:hover {
+  background-color: $covid-orange;
 
-  }
-
-  .about__download__apk:hover{
-
-      background-color: $covid-orange;
-
-      p{
-
-        color: $covid-white !important;
-
-      }
+  p {
+    color: $covid-white !important;
   }
 }
 
@@ -211,74 +230,220 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
 
-  .symptoms__list {
+.symptoms__list {
+  list-style: none;
+  padding: 0;
 
-    list-style: none;
-    padding: 0;
-
-    li {
-
-      background: url(../img/tick.png) no-repeat left center;
-      padding-left: 50px; /* the width of your image + some space */
-      margin: 3px 0;
-
-    }
+  li {
+    background: url(../img/tick.png) no-repeat left center;
+    padding-left: 50px; /* the width of your image + some space */
+    margin: 3px 0;
   }
 }
 
-.disclaimer{
-  &__inner{
+.disclaimer {
+  &__inner {
     background-color: $covid-light;
-    border-color: #D6D8E2 !important;
+    border-color: #d6d8e2 !important;
   }
 }
 
-footer{
+footer {
+  height: 250px;
 
-    height: 250px;
+  .footer__links {
+    li {
+      margin: 0px 10px;
 
-    .footer__links{
-
-        li{
-
-            margin: 0px 10px;
-
-            a{
-
-                color: $covid-white;
-
-            }
-        }
+      a {
+        color: $covid-white;
+      }
     }
+  }
+}
+
+// Hero images
+
+.--hotspots-hero {
+  background: url(../img/hotspots-hero.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.--symptoms-hero {
+  background: url(../img/symptoms-hero.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.--stop-hero {
+  background: url(../img/stop-hero.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .--stop-hero-mobile-graphic-1 {
+    top: -75px;
+    width: 400px;
+  }
+
+  .--stop-hero-mobile-graphic-2 {
+    top: -120px;
+    right: -80px;
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .--stop-hero {
+    height: 500px !important;
+    h1 {
+      margin-top: 150px;
+    }
+    .--stop-hero-mobile-graphic-1 {
+      display: none;
+    }
+
+    .--stop-hero-mobile-graphic-2 {
+      display: none;
+    }
+  }
+}
+
+.background__tracking {
+  height: 200px;
+  background: url(../img/stop-location-tracking-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.--contact-hero{
+  background: url(../img/contact-hero.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.--privacy-hero{
+  background: url(../img/privacy-hero.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 
 
+
+
+.symptoms__details {
+  .symptoms__top-left-bg-graphic {
+    width: 300px;
+    top: 0;
+    left: 0;
+  }
+
+  .symptoms__bottom-right-bg-graphic {
+    width: 300px;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.self__assessment {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 247, 224, 1) 100%
+  );
+
+  .self__assessment-top-left-graphic{
+    top: 0px;
+    left: 0px;
+    width: 200px;
+  }
+
+  .self__assessment-bottom-right-graphic{
+    bottom: 0px;
+    right: 0px;
+    width: 200px;
+  }
+}
+
+.places__safety{
+
+  background-color: #F9F9FE;
+
+  .places__safety-bottom-left-graphic{
+    bottom: 0px;
+    left: 0px;
+    width: 100px;
+  }
+
+}
+
+.user__anonymity{
+  background-color: #E1E7FB;
+}
+
+.contact__form{
+  background: url(../img/contact-form-bg.png);
+  background-size: cover;
+
+  .contact__form__inner{
+    width: 500px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.3);
+  }
+
+}
+
+.privacy__navs{
+
+  .nav-link.active{
+    color: $covid-orange;
+  }
+
+}
+
+
+/*********************************************************************
+// Main Quries
+*********************************************************************/
+$section-height-large-screen: 600px;
+$section-height-medium-screen: 500px;
 
 
 @media only screen and (min-width: 1920px) {
-    .hero{
-        height: 1000px;
-    }
+  .hero {
+    height: 1000px;
+  }
+}
+
+@media only screen and (min-width: 991px){
+  .--section-height-lg{
+    height: $section-height-large-screen;
+  }
 }
 
 @media only screen and (max-width: 1920px) {
-
-    .hero{
-        height: 700px;
-    }
-    .about{
-        height: 700px;
-    }
-    .symptoms{
-        height: 700px;
-    }
-
+  .hero {
+    height: 700px;
+  }
+  .about {
+    height: 700px;
+  }
+  .symptoms {
+    height: 700px;
+  }
 }
 
 @media only screen and (max-width: 1440px) {
-    
 }
 
 @media only screen and (max-width: 1366px) {
@@ -287,55 +452,71 @@ footer{
 @media only screen and (max-width: 1024px) {
 }
 
-@media only screen and (max-width: 991px){
-    .navbar{
-        .nav-link{
-            text-align: center;
-        }
-        .bar{
-            display: none;
-        }
-    }
+@media only screen and (max-width: 991px) {
 
-    .hero{
-        .row{
-            h2{
-                margin: 0px !important;
-            }
-        }
-    }
+  .--section-height-md{
+    height: $section-height-medium-screen;
+  }
 
-    .about{
-        height: 100vh;
+  .navbar {
+    .nav-link {
+      text-align: center;
     }
+    .bar {
+      display: none;
+    }
+  }
 
-    .symptoms{
-        height: 100vh;
+  .hero {
+    .row {
+      h2 {
+        margin: 0px !important;
+      }
     }
+  }
+
+  .about {
+    height: 100vh;
+  }
+
+  .symptoms {
+    height: 100vh;
+  }
+
+
+
+
+  .symptoms__top-left-bg-graphic, 
+  .symptoms__bottom-right-bg-graphic,
+  .self__assessment-top-left-graphic,
+  .self__assessment-bottom-right-graphic,
+  .places__safety-bottom-left-graphic {
+    display: none;
+  }
+
+
+
+
 
 }
 
 @media only screen and (max-width: 768px) {
-
-
-    footer{
-        height: auto !important;
-        padding: 1rem;
-        ul{
-            flex-direction: column;
-            text-align: center;
-            .footer__bar{
-                display: none;
-            }
-        }
+  footer {
+    height: auto !important;
+    padding: 1rem;
+    ul {
+      flex-direction: column;
+      text-align: center;
+      .footer__bar {
+        display: none;
+      }
     }
-
-
+  }
 }
 
-@media only screen and (max-width: 480px){
-    .hero{
-        height: 1000px;
-        background-position: center;
-    }
+@media only screen and (max-width: 480px) {
+  .hero {
+    height: 1000px;
+    background-position: center;
+  }
 }

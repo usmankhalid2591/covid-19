@@ -21,7 +21,6 @@
 	<!-- Style -->
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/fonts.css">
-	<link rel="stylesheet" href="css/colors.css">
 	<link rel="stylesheet" href="css/images.css">
 
 	<title>Home - Covid-19</title>
@@ -34,37 +33,38 @@
 			<a class="navbar-brand" href="#">
 				<img src="img/logo.png" alt="logo">
 			</a>
-			<button class="navbar-toggler" id="navbarToggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<button class="navbar-toggler" id="navbarToggler" type="button" data-toggle="collapse"
+				data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item active">
-						<a class="nav-link" href="#">Home</a>
+						<a class="nav-link" href="index.html">Home</a>
 					</li>
 					<li class="nav-item">
 						<div class="nav-link bar" href="#">|</div>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Symptoms</a>
+						<a class="nav-link" href="symptoms.html">Symptoms</a>
 					</li>
 					<li class="nav-item">
 						<div class="nav-link bar" href="#">|</div>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Stop COVID App</a>
+						<a class="nav-link" href="stop.html">Stop COVID App</a>
 					</li>
 					<li class="nav-item">
 						<div class="nav-link bar" href="#">|</div>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Hotspots</a>
+						<a class="nav-link" href="hotspots.html">Hotspots</a>
 					</li>
 					<li class="nav-item">
-						<div class="nav-link btn --covid-bg-orange pl-4 pr-4 --border-radius-10" href="#" tabindex="-1"
-							aria-disabled="true" id="contactButton">Contact Us</div>
+						<a class="nav-link btn --covid-bg-orange pl-4 pr-4 --border-radius-10" href="contact.html" tabindex="-1"
+							aria-disabled="true" id="contactButton">Contact Us</a>
 					</li>
 				</ul>
 			</div>
@@ -123,10 +123,12 @@
 						Each one of you could help prevent the Global Pandemic. You can protect yourself, your loved
 						ones and help the world fight against COVID-19.
 					</p>
-					<p class="--covid-text">
-						We will help you analyze your health by taking a screening test considering all the possible
-						risk factors and advice you accordingly.
-					</p>
+					<div class="p-3 --border-1 --border-radius-10 mb-2 --covid-border-yellow --covid-bg-yellow-light">
+						Stop COVID app anonymously collects location
+						data to enable up-to-date tracking of COVID-19
+						spread and to show the safety of different places,
+						even when the app is closed or not in use.
+					</div>
 					<p class="--covid-text --bold">
 						Feel free to Explore.
 					</p>
@@ -246,7 +248,8 @@
 								</h2>
 								<p class="--covid-text">
 									Hotspots on the map are based on anonymous data contributed by the community, mostly
-									through the use of <span class="--bold">Stop Covid App</span>, and may not include every location.
+									through the use of <span class="--bold">Stop Covid App</span>, and may not include
+									every location.
 								</p>
 							</div>
 						</div>

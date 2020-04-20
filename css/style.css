@@ -1,6 +1,18 @@
 /*********************************************************************
 // Generic CSS
 *********************************************************************/
+.--border-radius-10 {
+  border-radius: 10px;
+}
+
+.--border {
+  border: 2px solid transparent;
+}
+
+.--border-1 {
+  border: 1px solid !important;
+}
+
 .--covid-blue {
   color: #4d5cf0 !important;
 }
@@ -38,15 +50,31 @@
 }
 
 .--covid-light {
-  color: #FAFAFE !important;
+  color: #fafafe !important;
 }
 
 .--covid-bg-light {
-  background-color: #FAFAFE !important;
+  background-color: #fafafe !important;
 }
 
 .--covid-border-light {
-  border-color: #FAFAFE !important;
+  border-color: #fafafe !important;
+}
+
+.--covid-yellow {
+  color: #ffac00 !important;
+}
+
+.--covid-bg-yellow {
+  background-color: #ffac00 !important;
+}
+
+.--covid-border-yellow {
+  border-color: #ffac00 !important;
+}
+
+.--covid-bg-yellow-light {
+  background-color: #fff8e6 !important;
 }
 
 .--covid-bg-white {
@@ -60,18 +88,6 @@
 .--covid-dark-shadow {
   -webkit-box-shadow: 0px 0px 7px -1px #47495d;
           box-shadow: 0px 0px 7px -1px #47495d;
-}
-
-.--border-radius-10 {
-  border-radius: 10px;
-}
-
-.--border {
-  border: 2px solid transparent;
-}
-
-.--border-1 {
-  border: 1px solid !important;
 }
 
 /*********************************************************************
@@ -90,11 +106,17 @@ body {
 }
 
 body {
-  font-family: roboto-regular;
+  font-family: roboto-light;
 }
 
 body img {
   width: 100%;
+}
+
+.btn, input, textarea:focus, .btn, input:active {
+  border: none !important;
+  -webkit-box-shadow: 0px 0px 0.2rem 0px !important;
+          box-shadow: 0px 0px 0.2rem 0px !important;
 }
 
 header #nav {
@@ -113,7 +135,7 @@ header .navbar li .nav-link {
 }
 
 header .navbar li.active {
-  border-bottom: 2px solid #FAFAFE;
+  border-bottom: 2px solid #fafafe;
 }
 
 header .navbar li:nth-last-of-type(1) {
@@ -133,7 +155,7 @@ header .navbar-light li:nth-last-of-type(1) {
 }
 
 header .navbar-light li #contactButton {
-  color: #FAFAFE !important;
+  color: #fafafe !important;
 }
 
 .hero {
@@ -152,7 +174,7 @@ header .navbar-light li #contactButton {
 }
 
 .hero .owl-dots .owl-dot {
-  background-color: #D3D3E1 !important;
+  background-color: #d3d3e1 !important;
   width: 12px;
   height: 12px;
   border-radius: 50%;
@@ -161,7 +183,7 @@ header .navbar-light li #contactButton {
 }
 
 .hero .owl-dots .owl-dot.active {
-  background-color: #FACB39 !important;
+  background-color: #facb39 !important;
 }
 
 .about {
@@ -171,16 +193,16 @@ header .navbar-light li #contactButton {
   background-size: cover;
 }
 
-.about .about__download__apk {
+.about__download__apk {
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
 
-.about .about__download__apk:hover {
+.about__download__apk:hover {
   background-color: #ff7442;
 }
 
-.about .about__download__apk:hover p {
+.about__download__apk:hover p {
   color: #ffffff !important;
 }
 
@@ -191,12 +213,12 @@ header .navbar-light li #contactButton {
   background-size: cover;
 }
 
-.symptoms .symptoms__list {
+.symptoms__list {
   list-style: none;
   padding: 0;
 }
 
-.symptoms .symptoms__list li {
+.symptoms__list li {
   background: url(../img/tick.png) no-repeat left center;
   padding-left: 50px;
   /* the width of your image + some space */
@@ -204,8 +226,8 @@ header .navbar-light li #contactButton {
 }
 
 .disclaimer__inner {
-  background-color: #FAFAFE;
-  border-color: #D6D8E2 !important;
+  background-color: #fafafe;
+  border-color: #d6d8e2 !important;
 }
 
 footer {
@@ -220,9 +242,143 @@ footer .footer__links li a {
   color: #ffffff;
 }
 
+.--hotspots-hero {
+  background: url(../img/hotspots-hero.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.--symptoms-hero {
+  background: url(../img/symptoms-hero.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.--stop-hero {
+  background: url(../img/stop-hero.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.--stop-hero .--stop-hero-mobile-graphic-1 {
+  top: -75px;
+  width: 400px;
+}
+
+.--stop-hero .--stop-hero-mobile-graphic-2 {
+  top: -120px;
+  right: -80px;
+  width: 400px;
+}
+
+@media only screen and (max-width: 1280px) {
+  .--stop-hero {
+    height: 500px !important;
+  }
+  .--stop-hero h1 {
+    margin-top: 150px;
+  }
+  .--stop-hero .--stop-hero-mobile-graphic-1 {
+    display: none;
+  }
+  .--stop-hero .--stop-hero-mobile-graphic-2 {
+    display: none;
+  }
+}
+
+.background__tracking {
+  height: 200px;
+  background: url(../img/stop-location-tracking-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.--contact-hero {
+  background: url(../img/contact-hero.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.--privacy-hero {
+  background: url(../img/privacy-hero.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.symptoms__details .symptoms__top-left-bg-graphic {
+  width: 300px;
+  top: 0;
+  left: 0;
+}
+
+.symptoms__details .symptoms__bottom-right-bg-graphic {
+  width: 300px;
+  bottom: 0;
+  right: 0;
+}
+
+.self__assessment {
+  background: white;
+  background: -webkit-gradient(linear, left top, right top, from(white), to(#fff7e0));
+  background: linear-gradient(90deg, white 0%, #fff7e0 100%);
+}
+
+.self__assessment .self__assessment-top-left-graphic {
+  top: 0px;
+  left: 0px;
+  width: 200px;
+}
+
+.self__assessment .self__assessment-bottom-right-graphic {
+  bottom: 0px;
+  right: 0px;
+  width: 200px;
+}
+
+.places__safety {
+  background-color: #F9F9FE;
+}
+
+.places__safety .places__safety-bottom-left-graphic {
+  bottom: 0px;
+  left: 0px;
+  width: 100px;
+}
+
+.user__anonymity {
+  background-color: #E1E7FB;
+}
+
+.contact__form {
+  background: url(../img/contact-form-bg.png);
+  background-size: cover;
+}
+
+.contact__form .contact__form__inner {
+  width: 500px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.3);
+}
+
+/*********************************************************************
+// Main Quries
+*********************************************************************/
 @media only screen and (min-width: 1920px) {
   .hero {
     height: 1000px;
+  }
+}
+
+@media only screen and (min-width: 991px) {
+  .--section-height-lg {
+    height: 600px;
   }
 }
 
@@ -239,6 +395,9 @@ footer .footer__links li a {
 }
 
 @media only screen and (max-width: 991px) {
+  .--section-height-md {
+    height: 500px;
+  }
   .navbar .nav-link {
     text-align: center;
   }
@@ -253,6 +412,13 @@ footer .footer__links li a {
   }
   .symptoms {
     height: 100vh;
+  }
+  .symptoms__top-left-bg-graphic,
+  .symptoms__bottom-right-bg-graphic,
+  .self__assessment-top-left-graphic,
+  .self__assessment-bottom-right-graphic,
+  .places__safety-bottom-left-graphic {
+    display: none;
   }
 }
 
