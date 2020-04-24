@@ -18,6 +18,9 @@
 	<!-- Fontawesome Kit -->
 	<script src="js/fontawesome.js"></script>
 
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon.png" sizes="16x16 32x32" type="image/png">
+    
 	<!-- Style -->
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/fonts.css">
@@ -55,10 +58,10 @@
 					<li class="nav-item">
 						<a class="nav-link" href="stop.html">Stop COVID App</a>
 					</li>
-					<li class="nav-item">
+					<li class="nav-item d-none">
 						<div class="nav-link bar" href="#">|</div>
 					</li>
-					<li class="nav-item">
+					<li class="nav-item d-none">
 						<a class="nav-link" href="hotspots.html">Hotspots</a>
 					</li>
 					<li class="nav-item">
@@ -216,7 +219,7 @@
 		</div>
 	</div>
 
-	<div class="hostspots p-5">
+	<div class="hostspots p-5 d-none">
 		<div class="container text-center">
 			<h2 class="--covid-text --bold">Hotspots on Map</h2>
 			<p class="--covid-text">
@@ -232,7 +235,7 @@
 		</div>
 	</div>
 
-	<div class="disclaimer mb-5">
+	<div class="disclaimer mb-5 mt-5">
 		<div class="container">
 			<div class="disclaimer__inner --border --border-1 --border-radius-10 p-4 d-flex align-items-center">
 				<div class="row">
@@ -258,7 +261,7 @@
 		</div>
 	</div>
 
-	<div class="put-your-map-here">
+	<div class="put-your-map-here d-none">
 		<img src="img/map-dummy.png" alt="">
 	</div>
 
@@ -286,10 +289,10 @@
 						<li>
 							<div href="#" class="footer__bar">|</div>
 						</li>
-						<li>
+						<li class="d-none">
 							<a href="hotspots.html">Hotspots</a>
 						</li>
-						<li>
+						<li class="d-none">
 							<div href="#" class="footer__bar">|</div>
 						</li>
 						<li>

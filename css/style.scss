@@ -107,9 +107,6 @@ $covid-white: #ffffff;
 // Main CSS
 *********************************************************************/
 
-
-
-
 * {
   box-sizing: border-box;
   outline: none;
@@ -129,14 +126,14 @@ body {
   }
 }
 
-
-.btn, input, textarea:focus, .btn, input:active {
+.btn,
+input,
+textarea:focus,
+.btn,
+input:active {
   border: none !important;
   box-shadow: 0px 0px 0.2rem 0px !important;
 }
-
-
-
 
 header {
   #nav {
@@ -287,15 +284,14 @@ footer {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  height: 550px !important;
 
   .--stop-hero-mobile-graphic-1 {
-    top: -75px;
+    top: -165px;
     width: 370px;
   }
 
   .--stop-hero-mobile-graphic-2 {
-    top: -120px;
+    top: -165px;
     right: -80px;
     width: 370px;
   }
@@ -303,7 +299,6 @@ footer {
 
 @media only screen and (max-width: 1280px) {
   .--stop-hero {
-    height: 500px !important;
     h1 {
       margin-top: 150px;
     }
@@ -325,23 +320,19 @@ footer {
   background-size: cover;
 }
 
-.--contact-hero{
+.--contact-hero {
   background: url(../img/contact-hero.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.--privacy-hero{
+.--privacy-hero {
   background: url(../img/privacy-hero.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-
-
-
-
 
 .symptoms__details {
   .symptoms__top-left-bg-graphic {
@@ -365,62 +356,56 @@ footer {
     rgba(255, 247, 224, 1) 100%
   );
 
-  .self__assessment-top-left-graphic{
+  .self__assessment-top-left-graphic {
     top: 0px;
     left: 0px;
     width: 200px;
   }
 
-  .self__assessment-bottom-right-graphic{
+  .self__assessment-bottom-right-graphic {
     bottom: 0px;
     right: 0px;
     width: 200px;
   }
 }
 
-.places__safety{
+.places__safety {
+  background-color: #f9f9fe;
 
-  background-color: #F9F9FE;
-
-  .places__safety-bottom-left-graphic{
+  .places__safety-bottom-left-graphic {
     bottom: 0px;
     left: 0px;
     width: 100px;
   }
-
 }
 
-.user__anonymity{
-  background-color: #E1E7FB;
+.user__anonymity {
+  background-color: #e1e7fb;
 }
 
-.contact__form{
+.contact__form {
   background: url(../img/contact-form-bg.png);
   background-size: cover;
 
-  .contact__form__inner{
+  .contact__form__inner {
     width: 500px;
     border-radius: 3px;
-    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.3);
   }
-
 }
 
-.privacy__navs{
-
-  .nav{
+.privacy__navs {
+  .nav {
     border-bottom: 1px solid $covid-dark !important;
   }
 
-  .nav-link.active{
+  .nav-link.active {
     color: $covid-orange !important;
     border-bottom: 2px solid $covid-orange;
     border-radius: 0px;
     margin-bottom: -1px;
   }
-
 }
-
 
 /*********************************************************************
 // Main Quries
@@ -428,22 +413,25 @@ footer {
 $section-height-large-screen: 600px;
 $section-height-medium-screen: 500px;
 
-
 @media only screen and (min-width: 1920px) {
   .hero {
     height: 1000px;
   }
 }
 
-@media only screen and (min-width: 991px){
-  .--section-height-lg{
+@media only screen and (min-width: 991px) {
+  .--section-height-lg {
     height: $section-height-large-screen;
+  }
+
+  .hero {
+    padding-top: 170px !important;
   }
 }
 
 @media only screen and (max-width: 1920px) {
   .hero {
-    height: 700px;
+    height: 600px;
   }
   .about {
     height: 600px;
@@ -463,8 +451,7 @@ $section-height-medium-screen: 500px;
 }
 
 @media only screen and (max-width: 991px) {
-
-  .--section-height-md{
+  .--section-height-md {
     height: $section-height-medium-screen;
   }
 
@@ -478,6 +465,8 @@ $section-height-medium-screen: 500px;
   }
 
   .hero {
+    padding-top: 100px;
+    background-size: cover !important;
     .row {
       h2 {
         margin: 0px !important;
@@ -493,21 +482,13 @@ $section-height-medium-screen: 500px;
     height: 100vh;
   }
 
-
-
-
-  .symptoms__top-left-bg-graphic, 
+  .symptoms__top-left-bg-graphic,
   .symptoms__bottom-right-bg-graphic,
   .self__assessment-top-left-graphic,
   .self__assessment-bottom-right-graphic,
   .places__safety-bottom-left-graphic {
     display: none;
   }
-
-
-
-
-
 }
 
 @media only screen and (max-width: 768px) {
