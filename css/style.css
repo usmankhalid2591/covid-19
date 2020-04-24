@@ -160,9 +160,9 @@ header .navbar-light li #contactButton {
 
 .hero {
   background: url(../img/hero.png);
-  background-position: center;
+  background-position: center top;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
 }
 
 .hero .owl-nav {
@@ -190,7 +190,7 @@ header .navbar-light li #contactButton {
   background: url(../img/about-section-bg.png);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
 }
 
 .about__download__apk {
@@ -253,25 +253,27 @@ footer .footer__links li a {
   background: url(../img/symptoms-hero.png);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
+  height: 550px !important;
 }
 
 .--stop-hero {
   background: url(../img/stop-hero.png);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
+  height: 550px !important;
 }
 
 .--stop-hero .--stop-hero-mobile-graphic-1 {
   top: -75px;
-  width: 400px;
+  width: 370px;
 }
 
 .--stop-hero .--stop-hero-mobile-graphic-2 {
   top: -120px;
   right: -80px;
-  width: 400px;
+  width: 370px;
 }
 
 @media only screen and (max-width: 1280px) {
@@ -308,7 +310,7 @@ footer .footer__links li a {
   background: url(../img/privacy-hero.png);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
 }
 
 .symptoms__details .symptoms__top-left-bg-graphic {
@@ -395,13 +397,13 @@ footer .footer__links li a {
 
 @media only screen and (max-width: 1920px) {
   .hero {
-    height: 700px;
+    height: 600px;
   }
   .about {
-    height: 700px;
+    height: 600px;
   }
   .symptoms {
-    height: 700px;
+    height: 600px;
   }
 }
 
