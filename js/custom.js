@@ -12,41 +12,21 @@ window.onscroll = function () {
         var contactButton = document.getElementById('contactButton');
         contactButton.classList.add("text-white");
 
-    }
-    else {
+        if (screen.width <= 991) {
+            document.getElementById('navbarBrandImg').style.display = "block";
+        }
+
+    } else {
         myNav.classList.add("bg-transparent");
         myNav.classList.add("navbar-dark");
         myNav.classList.remove("bg-white");
         myNav.classList.remove("navbar-light");
         myNav.classList.remove("--covid-dark-shadow");
+        if (document.body.scrollTop === 0 || document.documentElement.scrollTop === 0) {
+            document.getElementById('navbarBrandImg').style.display = "none";
+        }
     }
 };
-
-document.getElementById('navbarToggler').onclick = function () {
-
-    if (document.body.scrollTop === 0 || document.documentElement.scrollTop === 0) {
-
-        if (screen.width <= 991) {
-
-            myNav.classList.add("bg-white");
-            myNav.classList.add("navbar-light");
-            myNav.classList.add("--covid-dark-shadow");
-            myNav.classList.remove("navbar-dark");
-            myNav.classList.remove("bg-transparent");
-
-        } else {
-            myNav.classList.add("bg-transparent");
-            myNav.classList.add("navbar-dark");
-            myNav.classList.remove("bg-white");
-            myNav.classList.remove("navbar-light");
-            myNav.classList.remove("--covid-dark-shadow");
-        }
-
-    }
-
-}
-
-
 
 $('.owl-carousel').owlCarousel({
     loop: true,
