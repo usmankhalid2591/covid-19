@@ -160,6 +160,7 @@ header .navbar-light li:nth-last-of-type(1) {
 
 header .navbar-light li #contactButton {
   color: #fafafe !important;
+  border: none !important;
 }
 
 .hero {
@@ -375,8 +376,11 @@ footer .footer__links li a {
   .navbar .bar {
     display: none;
   }
-  nav a.navbar-brand img {
-    display: none;
+  nav a.navbar-brand #navbarBrandImg {
+    display: none !important;
+  }
+  nav a.navbar-brand #navbarBrandImgSmall {
+    display: block !important;
   }
   .hero {
     background-image: url(../img/hero-991.png);
