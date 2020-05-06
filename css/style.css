@@ -231,10 +231,6 @@ header .navbar-light li #contactButton {
   margin: 3px 0;
 }
 
-.disclaimer {
-  display: none;
-}
-
 .disclaimer__inner {
   background-color: #fafafe;
   border-color: #d6d8e2 !important;
